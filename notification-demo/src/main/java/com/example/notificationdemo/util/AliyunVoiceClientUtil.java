@@ -22,7 +22,7 @@ public class AliyunVoiceClientUtil {
     private  String accessKeySecret = "你的阿里云Secret";
 
     /**
-     * 语音通话到某个用户
+     * 语音通话到某个用户（阿里云 V1.0 SDK 写法）
      * @param phoneNumber 被叫号码
      * @param ttsParam 语音模板中的变量参数 --- 请按模版参数有序存入
      * @param ttsCode Tts模板ID
@@ -40,7 +40,7 @@ public class AliyunVoiceClientUtil {
         request.setCalledNumber(phoneNumber);
         //必填-Tts模板ID
         request.setTtsCode(ttsCode);
-        //语音模板中的变量参数 示例：{"name":"123456","rainfall":50}
+        //语音模板中的变量参数 示例：{"name":"123456","rainfall":50} 的JSON字符串
         request.setTtsParam(ttsParam);
         //可选-音量 取值范围 0--100 默认取值 100
         request.setVolume(100);
